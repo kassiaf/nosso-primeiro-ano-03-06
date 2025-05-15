@@ -34,28 +34,19 @@ body {
 }
 
 #counter {
-  position: fixed;
-  top: 30px; /* Ajuste conforme a necessidade de posicionamento */
-  left: 50%;
-  transform: translateX(-50%); /* Centraliza horizontalmente */
+  position: static; /* importante para evitar sobreposição */
   font-size: 26px;
   color: #ff3399;
-  text-shadow: 0 0 10px #ffccf2, 0 0 20px #ff99cc;
-  z-index: 1000;
   background-color: rgba(255, 240, 250, 0.85);
   padding: 12px 24px;
   border-radius: 25px;
-  animation: pulse 2.5s infinite; /* Animação de pulsação */
-  text-align: center; /* Centraliza o texto dentro do contador */
-  line-height: 1.5; /* Controla o espaçamento entre linhas, se necessário */
-  white-space: normal; /* Permite a quebra de linha do texto */
-  max-width: 90%; /* Evita que o texto ultrapasse a tela */
+  text-shadow: 0 0 10px #ffccf2, 0 0 20px #ff99cc;
 }
 
 
 @keyframes pulse {
-  0%, 100% { transform: translateX(-50%) scale(1); }
-  50% { transform: translateX(-50%) scale(1.08); }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
 }
 
 .pulse {
@@ -63,28 +54,16 @@ body {
 }
 
 #memory-text {
-  position: absolute;
-  top: 130px; /* antes estava 110px */
-  width: 100%;
-  text-align: center;
   font-size: 24px;
   color: #cc0077;
-  z-index: 10;
-  padding: 0 20px;
 }
 
 
 #memory-image {
-  position: absolute;
-  top: 180px;
-  left: 50%;
-  transform: translateX(-50%);
   max-width: 90%;
   max-height: 65%;
-  opacity: 0;
-  transition: opacity 2s;
-  z-index: 9;
   border-radius: 15px;
+  opacity: 1; /* para garantir que esteja visível */
 }
 
 .heart {
@@ -127,4 +106,17 @@ body {
     transform: translateY(-100vh) scale(1.2) rotate(45deg);
     opacity: 0;
   }
+}
+
+#main-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  padding-top: 100px;
+  text-align: center;
+  gap: 20px;
+  z-index: 10;
 }
