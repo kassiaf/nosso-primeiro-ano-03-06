@@ -18,12 +18,7 @@ const memories = [
 function updateCounter() {
   const now = new Date();
   const secondsTogether = Math.floor((now - startDate) / 1000);
-<<<<<<< HEAD
   counterElement.textContent = `Em ${secondsTogether.toLocaleString()} segundos ao seu lado, vivi toda a magia que o amor pode oferecer... ❤️`;
-=======
-  counterElement.textContent = `💖 Já se passaram ${secondsTogether.toLocaleString()} segundos desde que começamos nossa história. E nesse tempo, vivemos momentos inesquecíveis como...`;
-
->>>>>>> 695ea436cca3e21324e28058e57122763382e283
   // Aplica a animação de pulso
   counterElement.classList.remove('pulse'); // Remove se já tiver
   void counterElement.offsetWidth;          // Força reflow para reiniciar a animação
