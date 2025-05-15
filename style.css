@@ -34,10 +34,9 @@ body {
 }
 
 #counter {
-  position: static; /* importante para evitar sobreposição */
+  position: static;
   font-size: 26px;
   color: #ff3399;
-  background-color: rgba(255, 240, 250, 0.85);
   padding: 16px 64px;
   border-radius: 25px;
   text-shadow: 0 0 10px #ffccf2, 0 0 20px #ff99cc;
@@ -61,7 +60,7 @@ body {
 
 #memory-image {
   max-width: 90%;
-  max-height: 65%;
+  height: auto;
   border-radius: 15px;
   transition: opacity 2s; 
 }
@@ -120,4 +119,24 @@ body {
   text-align: center;
   gap: 20px;
   z-index: 10;
+}
+
+/* Estilos para telas pequenas, até 480px de largura */
+@media (max-width: 480px) {
+  #counter {
+    font-size: 18px !important; 
+    padding: 10px 20px !important; 
+  }
+
+  #memory-text {
+    font-size: 16px !important; 
+    padding: 0 10px !important;
+  }
+
+#memory-image {
+    max-width: 90vw !important; 
+    max-height: 70vh !important; 
+    object-fit: contain !important;
+    padding-bottom: 10px !important;
+  }
 }
