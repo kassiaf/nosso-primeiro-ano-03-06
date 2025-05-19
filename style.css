@@ -60,7 +60,7 @@ body {
 
 #memory-image {
   max-width: 90%;
-  height: auto;
+  height: 65%;
   border-radius: 15px;
   transition: opacity 2s; 
 }
@@ -135,8 +135,9 @@ body {
 
 #memory-image {
     max-width: 90vw !important; 
-    max-height: 70vh !important; 
+    max-height: 55vh !important; 
     object-fit: contain !important;
     padding-bottom: 10px !important;
+    height: auto;
   }
 }
