@@ -102,13 +102,25 @@ async function typeText(text) {
 async function showImage(src) {
   memoryImage.style.opacity = 0;
   await sleep(500);
-  memoryImage.src = `assets/${src}`;
-  await sleep(100);
+
+  // Criar imagem temporária
+  const tempImg = new Image();
+  tempImg.src = `assets/${src}`;
+
+  // Espera o carregamento real da imagem
+  await new Promise(resolve => {
+    tempImg.onload = resolve;
+  });
+
+  // Só agora troca o src da imagem visível
+  memoryImage.src = tempImg.src;
+  await sleep(300);
   memoryImage.style.opacity = 1;
-  await sleep(3000); // Tempo que a imagem fica
+  await sleep(3000);
   memoryImage.style.opacity = 0;
-  await sleep(1000); // Tempo até a próxima memória
+  await sleep(1000);
 }
+
 
 async function startMemorySequence() {
   await sleep(3000); // Espera inicial para destacar o contador
