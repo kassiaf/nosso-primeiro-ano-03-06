@@ -44,6 +44,7 @@ const memories = [
   { text: 'Assistimos muuuuuuuitos filmes', image: 'cinema.jpg'},  
   { text: 'Jogamos video-game', image: 'video_game.jpg'},  
   { text: 'Caminhamos com os nenéns', image: 'caminhada_nenens.jpg'},
+  { text: 'Fomos assistir o titch', image: 'filme_stitch.jpg'},
 
   { text: 'Fizemos várias sessões Master Chef', image: 'linguica_assada.jpg'},  
   { text: 'Meu amor me ensinou a fazer pão de queijo (finalmente sou uma mineira completa)', image: 'pao_de_queijo.jpg'},  
